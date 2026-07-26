@@ -1,11 +1,13 @@
 # ZeroMouse - Home Assistant Integration
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![GitHub release](https://img.shields.io/github/v/release/totalitarian/ha-zeromouse?include_prereleases)](https://github.com/totalitarian/ha-zeromouse/releases)
-[![Validate](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hassfest.yaml)
-[![HACS Validation](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hacs.yaml/badge.svg)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hacs.yaml)
+[![Version](https://img.shields.io/github/manifest-json/v/totalitarian/ha-zeromouse?filename=custom_components%2Fzeromouse%2Fmanifest.json&color=slateblue&label=Version&style=for-the-badge)](https://github.com/totalitarian/ha-zeromouse/releases)
+![Downloads](https://img.shields.io/github/downloads/totalitarian/ha-zeromouse/total?label=Downloads&style=for-the-badge)
+[![Validate](https://img.shields.io/github/actions/workflow/status/totalitarian/ha-zeromouse/hassfest.yaml?branch=main&label=Hassfest&style=for-the-badge)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hassfest.yaml)
+[![HACS Validation](https://img.shields.io/github/actions/workflow/status/totalitarian/ha-zeromouse/hacs.yaml?branch=main&label=HACS&style=for-the-badge)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hacs.yaml)
+[![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg?logo=HomeAssistantCommunityStore&logoColor=white&style=for-the-badge)](https://github.com/hacs/integration)
+[![Community Forum](https://img.shields.io/static/v1.svg?label=Community&message=Forum&color=41bdf5&logo=HomeAssistant&logoColor=white&style=for-the-badge)](https://community.home-assistant.io/)
 
-[![Open your Home Assistant instance and show the add-on repository with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=totalitarian&repository=ha-zeromouse&category=integration)
+![Logo](https://raw.githubusercontent.com/totalitarian/ha-zeromouse/main/brand/zeromouse_icon.svg)
 
 Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-mouse.com). Monitors cat activity, detects prey, and controls flap settings — all from Home Assistant.
 
@@ -19,15 +21,11 @@ Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-m
 
 ## Installation
 
-### HACS (recommended)
+### Via [HACS](https://hacs.xyz/)
 
-1. Open HACS in Home Assistant
-2. Go to **Integrations** -> **Three-dot menu** -> **Custom repositories**
-3. Add `https://github.com/totalitarian/ha-zeromouse` as an **Integration**
-4. Search for **ZeroMouse** and install
-5. Restart Home Assistant
+<a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=totalitarian&repository=ha-zeromouse&category=integration" target="_blank"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open your Home Assistant instance and open a repository inside the Home Assistant Community Store." /></a>
 
-### Manual
+### Manually
 
 1. Download the [latest release](https://github.com/totalitarian/ha-zeromouse/releases)
 2. Copy the `custom_components/zeromouse` folder into your Home Assistant `config/custom_components/`
@@ -35,7 +33,7 @@ Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-m
 
 ## Configuration
 
-[![Open your Home Assistant instance and start the integration configuration flow.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=zeromouse)
+<a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=zeromouse" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
 
 1. Go to **Settings** -> **Devices & Services** -> **Add Integration**
 2. Search for **ZeroMouse**
