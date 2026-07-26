@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ZeroMouse Account",
+        "description": "Enter the login you use in the ZeroMouse app.",
+        "data": {
+          "username": "Email",
+          "password": "Password"
+        }
+      },
+      "device": {
+        "title": "ZeroMouse Device",
+        "description": "Enter your owner ID and device ID.",
+        "data": {
+          "owner_id": "Owner ID",
+          "device_id": "Device ID"
+        }
+      },
+      "pick_device": {
+        "title": "Select Your ZeroMouse",
+        "description": "Choose your device from the list, or enter its ID manually.",
+        "data": {
+          "device_id": "Device"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Could not reach ZeroMouse services.",
+      "invalid_device": "Could not find a device with that ID.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "poll_interval": "Poll interval (seconds)",
+          "include_exits": "Include exits (\"Leaving detected\") in the Last Event sensor/image"
+        }
+      }
+    }
+  }
+}
