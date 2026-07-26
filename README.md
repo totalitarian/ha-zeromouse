@@ -1,7 +1,11 @@
 # ZeroMouse - Home Assistant Integration
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://hacs.xyz/)
-[![GitHub release](https://img.shields.io/github/v/release/totalitarian/ha-zeromouse)](https://github.com/totalitarian/ha-zeromouse/releases)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![GitHub release](https://img.shields.io/github/v/release/totalitarian/ha-zeromouse?include_prereleases)](https://github.com/totalitarian/ha-zeromouse/releases)
+[![Validate](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hassfest.yaml)
+[![HACS Validation](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hacs.yaml/badge.svg)](https://github.com/totalitarian/ha-zeromouse/actions/workflows/hacs.yaml)
+
+[![Open your Home Assistant instance and show the add-on repository with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=totalitarian&repository=ha-zeromouse&category=integration)
 
 Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-mouse.com). Monitors cat activity, detects prey, and controls flap settings — all from Home Assistant.
 
@@ -16,6 +20,10 @@ Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-m
 ## Installation
 
 ### HACS (recommended)
+
+[![Open your Home Assistant instance and show the add-on repository with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=totalitarian&repository=ha-zeromouse&category=integration)
+
+Click the button above, or install manually:
 
 1. Open HACS in Home Assistant
 2. Go to **Integrations** -> **Three-dot menu** -> **Custom repositories**
@@ -54,8 +62,6 @@ After setup, configure via **Settings** -> **Devices & Services** -> **ZeroMouse
 |--------|-------------|
 | **Last Event** | Classification of the most recent event (e.g. "No prey detected", "Prey detected") |
 | **Last Event Time** | Timestamp of the most recent event (uses actual event time from the cloud) |
-| **Event History** | Recent event summary |
-| **Session Status** | Current session status |
 | **Wi-Fi RSSI** | Device Wi-Fi signal strength |
 | **Device Event Count** | Lifetime event count |
 | **IR Sensor Status** | Raw proximity/IR sensor reading |
@@ -100,13 +106,6 @@ After setup, configure via **Settings** -> **Devices & Services** -> **ZeroMouse
 |--------|-------------|
 | **Last Event** | GIF of the most recent detection event |
 | **Last Prey Detected** | GIF of the most recent prey event |
-| **Latest Detection** | Latest detection image |
-| **Early** | Early classification image |
-| **Entering Clean** | Clean entry image |
-| **Inconclusive** | Inconclusive classification image |
-| **Leaving** | Exit event image |
-| **Undecidable** | Undecidable classification image |
-| **Last Entry Not An Exit** | Last non-exit entry image |
 
 ## Troubleshooting
 
@@ -121,15 +120,6 @@ After setup, configure via **Settings** -> **Devices & Services** -> **ZeroMouse
 - Review the Home Assistant logs for connection errors
 - Try increasing the poll interval in options
 
-### Prey detection images not loading
-
-- Prey images are backfilled once per Home Assistant restart
-- If no prey events exist in the event history, the entity will remain unavailable until one occurs
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or pull request on [GitHub](https://github.com/totalitarian/ha-zeromouse).
-
-## License
-
-This project is licensed under the MIT License.
