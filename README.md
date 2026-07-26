@@ -35,6 +35,8 @@ Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-m
 
 ## Configuration
 
+[![Open your Home Assistant instance and start the integration configuration flow.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=zeromouse)
+
 1. Go to **Settings** -> **Devices & Services** -> **Add Integration**
 2. Search for **ZeroMouse**
 3. Enter your ZeroMouse app login credentials (email and password)
