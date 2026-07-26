@@ -93,13 +93,16 @@ class ZeroMouseSlotImage(CoordinatorEntity[ZeroMouseCoordinator], ImageEntity):
             self._last_event_id = event_id
             event_time = self._entry.get("event_time")
             if event_time:
-                parsed = dt_util.parse_datetime(event_time)
-                if parsed:
-                    self._attr_image_last_updated = (
-                        dt_util.as_utc(parsed) if parsed.tzinfo is None else parsed
-                    )
+                if isinstance(event_time, (int, float)):
+                    self._attr_image_last_updated = dt_util.utc_from_timestamp(event_time)
                 else:
-                    self._attr_image_last_updated = dt_util.utcnow()
+                    parsed = dt_util.parse_datetime(str(event_time))
+                    if parsed:
+                        self._attr_image_last_updated = (
+                            dt_util.as_utc(parsed) if parsed.tzinfo is None else parsed
+                        )
+                    else:
+                        self._attr_image_last_updated = dt_util.utcnow()
             else:
                 self._attr_image_last_updated = dt_util.utcnow()
         super()._handle_coordinator_update()

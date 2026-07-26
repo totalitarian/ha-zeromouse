@@ -115,7 +115,9 @@ class ZeroMouseEventTimestamp(CoordinatorEntity[ZeroMouseCoordinator], SensorEnt
         event_time = event.get("eventTime")
         if not event_time:
             return None
-        parsed = dt_util.parse_datetime(event_time)
+        if isinstance(event_time, (int, float)):
+            return dt_util.utc_from_timestamp(event_time)
+        parsed = dt_util.parse_datetime(str(event_time))
         if parsed is None:
             return None
         return dt_util.as_utc(parsed) if parsed.tzinfo is None else parsed
