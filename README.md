@@ -58,6 +58,7 @@ After setup, configure via **Settings** -> **Devices & Services** -> **ZeroMouse
 |--------|-------------|
 | **Last Event** | Classification of the most recent event (e.g. "No prey detected", "Prey detected") |
 | **Last Event Time** | Timestamp of the most recent event (uses actual event time from the cloud) |
+| **Last Prey Time** | Timestamp of the most recent prey detection event |
 | **Wi-Fi RSSI** | Device Wi-Fi signal strength |
 | **Device Event Count** | Lifetime event count |
 | **IR Sensor Status** | Raw proximity/IR sensor reading |

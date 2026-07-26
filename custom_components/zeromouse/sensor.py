@@ -33,6 +33,7 @@ async def async_setup_entry(
         [
             ZeroMouseLastClassification(events, entry),
             ZeroMouseEventTimestamp(events, entry),
+            ZeroMouseLastPreyTimestamp(events, entry),
             ZeroMouseEventCount(shadow, entry),
             ZeroMouseIRSensorStatus(shadow, entry),
             ZeroMouseFirmwareVersion(shadow, entry),
@@ -113,6 +114,34 @@ class ZeroMouseEventTimestamp(CoordinatorEntity[ZeroMouseCoordinator], SensorEnt
         if not event:
             return None
         event_time = event.get("eventTime")
+        if not event_time:
+            return None
+        if isinstance(event_time, (int, float)):
+            return dt_util.utc_from_timestamp(event_time)
+        parsed = dt_util.parse_datetime(str(event_time))
+        if parsed is None:
+            return None
+        return dt_util.as_utc(parsed) if parsed.tzinfo is None else parsed
+
+
+class ZeroMouseLastPreyTimestamp(CoordinatorEntity[ZeroMouseCoordinator], SensorEntity):
+    """Timestamp of the most recent prey detection event, read from
+    the history index (same data that feeds the last prey image)."""
+
+    _attr_name = "Last Prey Time"
+    _attr_has_entity_name = True
+    _attr_device_class = SensorDeviceClass.TIMESTAMP
+
+    def __init__(self, coordinator: ZeroMouseCoordinator, entry: ConfigEntry) -> None:
+        super().__init__(coordinator)
+        self._attr_unique_id = f"{entry.entry_id}_last_prey_time"
+        self._attr_device_info = zeromouse_device_info(entry)
+
+    @property
+    def native_value(self) -> datetime | None:
+        history = (self.coordinator.data or {}).get("history") or {}
+        prey = history.get("last_prey") or {}
+        event_time = prey.get("event_time")
         if not event_time:
             return None
         if isinstance(event_time, (int, float)):
