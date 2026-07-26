@@ -21,10 +21,6 @@ Home Assistant integration for the [ZeroMouse Smart Cat Flap](https://www.zero-m
 
 ### HACS (recommended)
 
-[![Open your Home Assistant instance and show the add-on repository with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=totalitarian&repository=ha-zeromouse&category=integration)
-
-Click the button above to add the custom repository to HACS, or install manually:
-
 1. Open HACS in Home Assistant
 2. Go to **Integrations** -> **Three-dot menu** -> **Custom repositories**
 3. Add `https://github.com/totalitarian/ha-zeromouse` as an **Integration**
@@ -38,8 +34,6 @@ Click the button above to add the custom repository to HACS, or install manually
 3. Restart Home Assistant
 
 ## Configuration
-
-[![Open your Home Assistant instance and start the integration configuration flow.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/start_integration/?domain=zeromouse)
 
 1. Go to **Settings** -> **Devices & Services** -> **Add Integration**
 2. Search for **ZeroMouse**
